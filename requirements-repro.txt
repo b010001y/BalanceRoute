@@ -1,0 +1,4 @@
+# Versions used for the frozen reference and release validation.
+# Install the local package separately: python -m pip install -e ".[test]"
+numpy==2.4.1
+pytest==9.0.1

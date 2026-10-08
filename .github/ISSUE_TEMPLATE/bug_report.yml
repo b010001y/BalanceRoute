@@ -1,0 +1,20 @@
+name: Bug or reproduction mismatch
+description: Report a simulator issue or a failed reference verification.
+body:
+  - type: textarea
+    id: command
+    attributes:
+      label: Command and expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Actual result or error
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment and configuration
+      description: Include Python/NumPy versions, OS, configuration, and the verification error. Review logs before sharing private paths or data.

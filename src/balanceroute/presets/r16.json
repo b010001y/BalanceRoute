@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "name": "synthetic-long-tail-r16-v1",
+  "input_source": "frozen",
+  "seeds": [
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109
+  ],
+  "workload": {
+    "n_requests": 8000,
+    "mean_prompt": 3000.0,
+    "mean_output": 1000.0,
+    "sigma_prompt": 1.0,
+    "sigma_output": 0.9,
+    "correlation": 0.0,
+    "min_prompt": 128,
+    "max_prompt": 65536,
+    "min_output": 200,
+    "max_output": 8192
+  },
+  "simulation": {
+    "n_workers": 8,
+    "max_requests_per_worker": 72,
+    "ready_pool_size": 608,
+    "fixed_step_seconds": 0.0048875,
+    "seconds_per_context_token": 1.0052490234375e-07,
+    "window_start_fraction": 0.1,
+    "window_end_fraction": 0.6
+  },
+  "policies": [
+    {
+      "name": "Random",
+      "kind": "random"
+    },
+    {
+      "name": "RR",
+      "kind": "round_robin"
+    },
+    {
+      "name": "P2C",
+      "kind": "power_of_two"
+    },
+    {
+      "name": "JSQ",
+      "kind": "jsq"
+    },
+    {
+      "name": "LTL",
+      "kind": "least_token_load"
+    },
+    {
+      "name": "BR-0",
+      "kind": "balance_route",
+      "parameters": {
+        "horizon": 0,
+        "candidate_window": 16,
+        "greedy_slot_threshold": 7,
+        "alpha": 1.0,
+        "beta": 8.0,
+        "decay": 0.86,
+        "candidate_order": "prompt_desc"
+      }
+    },
+    {
+      "name": "BR-H",
+      "kind": "balance_route",
+      "parameters": {
+        "horizon": 80,
+        "candidate_window": 16,
+        "greedy_slot_threshold": 7,
+        "alpha": 1.0,
+        "beta": 43.0,
+        "decay": 0.86,
+        "candidate_order": "prompt_desc"
+      }
+    }
+  ]
+}

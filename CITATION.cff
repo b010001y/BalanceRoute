@@ -1,0 +1,52 @@
+cff-version: 1.2.0
+message: "If you use BalanceRoute, please cite the accompanying paper."
+title: "BalanceRoute"
+repository-code: "https://github.com/b010001y/BalanceRoute"
+license: Apache-2.0
+type: software
+version: 0.1.0a1
+authors:
+  - family-names: Bu
+    given-names: Tianci
+  - family-names: Lyu
+    given-names: Yuan
+  - family-names: Chen
+    given-names: Zixi
+  - family-names: Song
+    given-names: Chendong
+  - family-names: Liang
+    given-names: Hong
+  - family-names: Gurung
+    given-names: Tsepten
+  - family-names: Fan
+    given-names: Yuwei
+  - family-names: Ye
+    given-names: Yinyu
+  - family-names: Zhou
+    given-names: Zijie
+preferred-citation:
+  type: article
+  title: "Tackling the Data-Parallel Load Balancing Bottleneck in LLM Serving: Practical Online Routing at Scale"
+  authors:
+    - family-names: Bu
+      given-names: Tianci
+    - family-names: Lyu
+      given-names: Yuan
+    - family-names: Chen
+      given-names: Zixi
+    - family-names: Song
+      given-names: Chendong
+    - family-names: Liang
+      given-names: Hong
+    - family-names: Gurung
+      given-names: Tsepten
+    - family-names: Fan
+      given-names: Yuwei
+    - family-names: Ye
+      given-names: Yinyu
+    - family-names: Zhou
+      given-names: Zijie
+  year: 2026
+  journal: arXiv
+  doi: 10.48550/arXiv.2605.06113
+  url: "https://arxiv.org/abs/2605.06113"
